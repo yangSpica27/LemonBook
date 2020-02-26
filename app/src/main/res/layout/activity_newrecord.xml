@@ -37,7 +37,6 @@
         android:paddingStart="@dimen/default_view_margin"
         android:paddingTop="@dimen/default_view_margin"
         android:paddingBottom="@dimen/default_view_margin"
-        android:text="100"
         android:textAppearance="@style/TextAppearance.UIFabric.Title2"
         android:textColor="@color/uifabric_communication_shade_20"
         app:layout_constraintLeft_toRightOf="@id/tv_icon"

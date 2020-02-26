@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">柠檬记账</string>
+    <string name="app_bar_layout_menu_search">搜索</string>
+    <string name="app_bar_layout_searchbar_accessory_view_button">Show as accessory view</string>
+    <string name="app_bar_layout_searchbar_action_view_button">Show as action view</string>
+    <string name="card_content">这是一个来自 Spica 27 独立开发的 柠檬记账 App 中的关于页面。\n\n柠檬记账 是一款用于生活记账的轻应用。\n只为满足一个纯纯的记录需求，让记账也能成为一种赏心悦目。\n\n这是我假期作为复习Kotlin语法的DEMO性作品，原计划并不打算持久性维护，后续期间会根据反馈维修BUG，原则上不添加新功能（立项初期就没有打算长久维护，代码结构并没有使用适合长期维护的架构）。</string>
+    <string name="statu">状态</string>
+
+</resources>
+
+

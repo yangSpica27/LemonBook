@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/d_divider"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:context=".activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white"
+        android:paddingTop="@dimen/default_layout_margin">
+
+        <TextView
+            android:id="@+id/tv_title_revenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_layout_margin"
+            android:text="@string/statu"
+            android:textAppearance="@style/TextAppearance.UIFabric.Heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_layout_margin"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:text="本月支出"
+            android:textAppearance="@style/TextAppearance.UIFabric.SubHeading1"
+            android:textColor="#FF9100"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_revenue" />
+
+        <TextView
+            android:id="@+id/tv_title_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_layout_margin"
+            android:text="本月收入"
+            android:textAppearance="@style/TextAppearance.UIFabric.SubHeading1"
+            android:textColor="@color/uifabric_communication_blue"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_revenue" />
+
+        <TextView
+            android:id="@+id/tv_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_layout_margin"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:text="￥0"
+            android:textAppearance="@style/TextAppearance.UIFabric.Title2"
+            android:textColor="#FF9100"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_use" />
+
+        <TextView
+            android:id="@+id/tv_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:layout_marginEnd="@dimen/default_layout_margin"
+            android:text="￥0"
+            android:textAppearance="@style/TextAppearance.UIFabric.Title2"
+            android:textColor="@color/uifabric_communication_blue"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_use" />
+
+        <View
+            android:id="@+id/view_line1"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:background="@drawable/ms_row_divider"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_use" />
+
+        <com.microsoft.officeuifabric.widget.Button
+            android:id="@+id/btn_all_record"
+            style="@style/Widget.UIFabric.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:text="全部记录"
+            app:layout_constraintTop_toBottomOf="@id/view_line1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_plan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_background"
+        android:padding="@dimen/default_layout_margin">
+
+        <TextView
+            android:id="@+id/tv_title_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本月预算"
+            android:textAppearance="@style/TextAppearance.UIFabric.Heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_subtitle_hasper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:text="剩余"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_budget" />
+
+        <TextView
+            android:id="@+id/tv_subtitle_has"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:text="预算"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_budget" />
+
+        <TextView
+            android:id="@+id/tv_subtitle_hasday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:text="距离结算日"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_budget" />
+
+        <TextView
+            android:id="@+id/tv_hasper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:text="100%"
+            android:textAppearance="@style/TextAppearance.UIFabric.Title1"
+            android:textColor="@color/uifabric_communication_shade_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle_has" />
+
+        <TextView
+            android:id="@+id/tv_hasmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:text="￥100"
+            android:textAppearance="@style/TextAppearance.UIFabric.Title1"
+            android:textColor="@color/uifabric_communication_shade_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle_has" />
+
+        <TextView
+            android:id="@+id/tv_hasday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:text="6天"
+            android:textAppearance="@style/TextAppearance.UIFabric.Title1"
+            android:textColor="@color/uifabric_communication_shade_20"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle_has" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white">
+
+        <TextView
+            android:id="@+id/tv_title_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_layout_margin"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:text="本月趋势图"
+            android:textAppearance="@style/TextAppearance.UIFabric.Heading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart_linechart"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_margin="@dimen/default_layout_margin"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_chart" />
+
+        <View
+            android:id="@+id/view_line2"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="@dimen/default_view_margin"
+            android:background="@drawable/ms_row_divider"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chart_linechart" />
+
+        <com.microsoft.officeuifabric.widget.Button
+            android:id="@+id/btn_all_chart"
+            style="@style/Widget.UIFabric.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:text="详细报表"
+            app:layout_constraintTop_toBottomOf="@id/view_line2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.microsoft.officeuifabric.listitem.ListSubHeaderView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="最近记录"
+        app:titleColor="secondary" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--AppBarLayout-->
+    <item name="app_bar_layout_toggle_scroll_behavior_sub_header" type="id" />
+    <item name="app_bar_layout_toggle_scroll_behavior_button" type="id" />
+    <item name="app_bar_layout_toggle_navigation_icon_button" type="id" />
+    <item name="app_bar_layout_toggle_searchbar_type_button" type="id" />
+    <item name="app_bar_layout_toggle_theme_button" type="id" />
+    <item name="app_bar_layout_action_search" type="id" />
+
+    <!--BottomSheet-->
+    <item name="bottom_sheet_item_snacks" type="id" />
+    <item name="bottom_sheet_item_sync" type="id" />
+    <item name="bottom_sheet_item_share" type="id" />
+    <item name="bottom_sheet_item_card" type="id" />
+    <item name="bottom_sheet_item_code" type="id" />
+    <item name="bottom_sheet_item_setting" type="id" />
+    <item name="bottom_sheet_item_help" type="id" />
+    <!--menu-->
+    <item name="menu_delete" type="id"/>
+
+
+</resources>

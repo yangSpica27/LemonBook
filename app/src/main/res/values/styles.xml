@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.AppTheme" parent="Theme.UIFabric">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/bg_color</item>
+        <item name="android:background">@null</item>
+        <item name="android:statusBarColor">?android:colorPrimary</item>
+        <!--关闭hyphenationFrequency,提升渲染效率-->
+        <item name="android:hyphenationFrequency" tools:targetApi="m">none</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+    </style>
+
+    <style name="AppTheme" parent="Base.AppTheme" />
+
+    <style name="Base.AppTheme.Launcher">
+        <!--Use background instead of windowBackground to account for differences in bottom nav bar height treatment-->
+        <item name="android:background">@drawable/uifabric_launch_screen</item>
+        <item name="android:statusBarColor">?attr/uifabricBackgroundColor</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <!--启动屏-->
+    <style name="AppTheme.Launcher" parent="Base.AppTheme.Launcher" />
+
+    <!--Demo-->
+
+    <!--Demo font-->
+    <style name="TextAppearance.ListItemValue" parent="@style/TextAppearance.UIFabric.SubHeading1">
+        <item name="android:textColor">?attr/uifabricForegroundSecondaryColor</item>
+    </style>
+
+    <!--Tooltip Demo-->
+
+</resources>

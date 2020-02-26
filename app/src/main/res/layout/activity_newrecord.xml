@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_type"
+        style="@style/Widget.UIFabric.Dialog.TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white"
+        android:paddingStart="@dimen/default_layout_margin"
+        android:paddingTop="@dimen/default_view_margin"
+        android:paddingBottom="@dimen/default_view_margin"
+        android:text="￥"
+        android:textAppearance="@style/TextAppearance.UIFabric.Title1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_type" />
+
+    <EditText
+        android:id="@+id/et_money"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white"
+        android:hint="0.00"
+        android:inputType="number|numberDecimal"
+        android:lines="1"
+        android:paddingStart="@dimen/default_view_margin"
+        android:paddingTop="@dimen/default_view_margin"
+        android:paddingBottom="@dimen/default_view_margin"
+        android:text="100"
+        android:textAppearance="@style/TextAppearance.UIFabric.Title2"
+        android:textColor="@color/uifabric_communication_shade_20"
+        app:layout_constraintLeft_toRightOf="@id/tv_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_type" />
+
+    <View
+        android:id="@+id/view_line1"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@drawable/ms_row_divider"
+        app:layout_constraintTop_toBottomOf="@id/tv_icon" />
+
+    <TextView
+        android:id="@+id/tv_title_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white"
+        android:paddingStart="@dimen/default_layout_margin"
+        android:paddingTop="@dimen/default_view_margin"
+        android:text="分类"
+        android:textAppearance="@style/TextAppearance.UIFabric.Body2"
+        android:textColor="@color/uifabric_gray_500"
+        app:layout_constraintTop_toBottomOf="@id/view_line1" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white"
+        android:paddingStart="@dimen/default_layout_margin"
+        android:paddingTop="@dimen/default_view_margin"
+        android:paddingBottom="@dimen/default_view_margin"
+        android:text="生活用品"
+        android:textAppearance="@style/TextAppearance.UIFabric.Heading"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_type" />
+
+    <View
+        android:id="@+id/view_line2"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@drawable/ms_row_divider"
+        app:layout_constraintTop_toBottomOf="@id/tv_type" />
+
+    <TextView
+        android:id="@+id/tv_title_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white"
+        android:paddingStart="@dimen/default_layout_margin"
+        android:paddingTop="@dimen/default_view_margin"
+        android:text="日期"
+        android:textAppearance="@style/TextAppearance.UIFabric.Body2"
+        android:textColor="@color/uifabric_gray_500"
+        app:layout_constraintTop_toBottomOf="@id/view_line2" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white"
+        android:paddingStart="@dimen/default_layout_margin"
+        android:paddingTop="@dimen/default_view_margin"
+        android:paddingBottom="@dimen/default_view_margin"
+        android:text="选择日期"
+        android:textAppearance="@style/TextAppearance.UIFabric.Heading"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_date" />
+
+    <View
+        android:id="@+id/view_line3"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@drawable/ms_row_divider"
+        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+    <TextView
+        android:id="@+id/tv_title_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white"
+        android:paddingStart="@dimen/default_layout_margin"
+        android:paddingTop="@dimen/default_view_margin"
+        android:text="备注"
+        android:textAppearance="@style/TextAppearance.UIFabric.Body2"
+        android:textColor="@color/uifabric_gray_500"
+        app:layout_constraintTop_toBottomOf="@id/view_line3" />
+
+    <EditText
+        android:id="@+id/et_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white"
+        android:hint="在此填写更多信息"
+        android:lines="1"
+        android:paddingStart="@dimen/default_layout_margin"
+        android:paddingTop="@dimen/default_view_margin"
+        android:paddingBottom="@dimen/default_view_margin"
+        android:textAppearance="@style/TextAppearance.UIFabric.Heading"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_info" />
+
+    <View
+        android:id="@+id/view_line4"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@drawable/ms_row_divider"
+        app:layout_constraintTop_toBottomOf="@id/et_info" />
+
+
+    <Button
+        android:id="@+id/btn_save_record"
+        style="@style/Widget.UIFabric.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:text="保存记录"
+        android:textSize="@dimen/calendar_date_title_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_line4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

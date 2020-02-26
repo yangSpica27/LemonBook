@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.microsoft.officeuifabric.listitem.ListSubHeaderView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="本月预算"
+        app:titleColor="secondary" />
+
+    <EditText
+        android:id="@+id/et_planmoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uifabric_white"
+        android:hint="￥0"
+        android:textColor="@color/uifabric_black"
+        android:inputType="number"
+        android:padding="@dimen/default_layout_margin"
+        android:textAppearance="@style/TextAppearance.UIFabric.Title2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@drawable/ms_row_divider" />
+
+    <com.microsoft.officeuifabric.widget.Button
+        android:id="@+id/btn_save_plan"
+        style="@style/Widget.UIFabric.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/uifabric_white"
+        android:text="完成"
+        app:layout_constraintTop_toBottomOf="@id/view_line1" />
+
+
+</LinearLayout>

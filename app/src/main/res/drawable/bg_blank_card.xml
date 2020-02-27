@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true">
+        <shape>
+            <corners android:radius="@dimen/uifabric_corner_radius_8"/>
+            <gradient android:angle="135" android:centerColor="#08A1FF" android:endColor="#8080ff" android:startColor="#5ec6fb" />
+        </shape>
+    </item>
+
+    <item android:state_selected="false">
+        <shape>
+            <corners android:radius="@dimen/uifabric_corner_radius_8"/>
+            <gradient android:angle="135" android:centerColor="#08a1ef" android:endColor="#8080ff" android:startColor="#5ec6fb" />
+        </shape>
+    </item>
+
+</selector>

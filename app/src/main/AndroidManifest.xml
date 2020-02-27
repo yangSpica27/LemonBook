@@ -38,6 +38,8 @@
         <activity
             android:name=".activity.AboutActivity"
             android:launchMode="singleTask" />
+        <activity android:name=".activity.BlankCardActivity" />
+        <activity android:name=".activity.NewBlankCardActivity" />
     </application>
 
 </manifest>

@@ -17,7 +17,15 @@
     <item name="bottom_sheet_item_setting" type="id" />
     <item name="bottom_sheet_item_help" type="id" />
     <!--menu-->
-    <item name="menu_delete" type="id"/>
+    <item name="menu_delete" type="id" />
+
+    <!-- 卡片View的Id-->
+    <item name="container" type="id" />
+    <item name="tv_title_card_name" type="id" />
+    <item name="tv_card_name" type="id" />
+    <item name="tv_card_num" type="id" />
+    <item name="tv_title_card_date" type="id" />
+    <item name="tv_card_date" type="id" />
 
 
 </resources>

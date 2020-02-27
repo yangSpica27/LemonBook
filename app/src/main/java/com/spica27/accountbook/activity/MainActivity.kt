@@ -387,7 +387,10 @@ class MainActivity : BaseActivity(), View.OnClickListener, BottomSheetItem.OnCli
                 startActivity(Intent(this, AboutActivity::class.java))
             }
             R.id.bottom_sheet_item_card -> {
-                Toast.makeText(this, "敬请期待", Toast.LENGTH_LONG).show()
+                val activity = MYACTIVITYS.find { it.activityClass == BlankCardActivity::class }
+                val intent = Intent(this, BlankCardActivity::class.java)
+                intent.putExtra(ACTIVITY_ID, activity?.id)
+                startActivity(intent)
             }
             R.id.bottom_sheet_item_sync -> {
                 Toast.makeText(this, "敬请期待", Toast.LENGTH_LONG).show()

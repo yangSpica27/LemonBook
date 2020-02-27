@@ -5,18 +5,22 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.spica27.accountbook.DATABASE_NAME
+import com.spica27.accountbook.db.bean.BlankCard
 import com.spica27.accountbook.db.bean.Record
 import com.spica27.accountbook.db.bean.User
+import com.spica27.accountbook.db.dao.BlankCardDao
 import com.spica27.accountbook.db.dao.RecordDao
 import com.spica27.accountbook.db.dao.UserDao
 
 
 @Suppress("DEPRECATION")
-@Database(entities = [Record::class,User::class], version = 1, exportSchema = false)
+@Database(entities = [Record::class,User::class,BlankCard::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun recordDao(): RecordDao
 
     abstract fun userDao(): UserDao
+
+    abstract fun blankDao():BlankCardDao
 
     companion object {
 

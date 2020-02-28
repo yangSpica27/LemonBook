@@ -146,6 +146,6 @@ public class BandCardEditText extends AppCompatEditText {
 
   @Override
   public boolean onTouchEvent(MotionEvent event) {
-    return super.onTouchEvent(event);
+    return false;
   }
 }

@@ -27,5 +27,21 @@
     <item name="tv_title_card_date" type="id" />
     <item name="tv_card_date" type="id" />
 
+    <!--备份界面的Id-->
+    <item name="layout_backups" type="id" />
+    <item name="title_hosts" type="id" />
+    <item name="et_hosts" type="id" />
+    <item name="title_account" type="id" />
+    <item name="et_account" type="id" />
+    <item name="title_password" type="id" />
+    <item name="et_password" type="id" />
+    <item name="line" type="id" />
+    <item name="item_save_db" type="id" />
+    <item name="item_back_db" type="id" />
+    <!--所有记录-->
+    <item name="layout_all_record" type="id" />
+    <!--卡片列表-->
+    <item name="layout_all_card" type="id" />
+
 
 </resources>

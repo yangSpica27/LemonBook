@@ -16,13 +16,15 @@ const val SETTING = "设置"
 const val HELP = "帮助"
 const val BLANKCARD = "卡包"
 const val NEWBLANKCARD = "创建卡片"
+const val BACKUP="恢复与备份"
 
 val MYACTIVITYS = arrayListOf(
     MyActivity(MAIN, MainActivity::class),
     MyActivity(ALLRECORD, AllRecordActivity::class),
     MyActivity(NewRecord, NewRecordActivity::class),
     MyActivity(BLANKCARD, BlankCardActivity::class),
-    MyActivity(NEWBLANKCARD, NewBlankCardActivity::class)
+    MyActivity(NEWBLANKCARD, NewBlankCardActivity::class),
+    MyActivity(BACKUP,BackupActivity::class)
 
 )
 

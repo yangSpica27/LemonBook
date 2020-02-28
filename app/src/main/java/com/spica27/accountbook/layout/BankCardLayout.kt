@@ -4,7 +4,9 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
 import android.util.AttributeSet
+import android.view.MotionEvent
 import android.widget.TextView
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.setPadding
@@ -123,7 +125,34 @@ class BankCardLayout : ConstraintLayout {
         tvDate?.setTextColor(ContextCompat.getColor(context, R.color.uifabric_white))
         addView(tvDate, lpDate)
         //初始化完成
+
+
     }
 
 
+
+    //防止重复点击
+    private var lastClickTime: Long = 0
+
+    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
+
+        if (ev.action == MotionEvent.ACTION_DOWN) {
+            if (isFrequentlyClick()) {
+
+                Toast.makeText(context, "请不要重复点击", Toast.LENGTH_SHORT).show()
+                return true
+            }
+        }
+
+        return super.dispatchTouchEvent(ev)
+    }
+
+    fun isFrequentlyClick(): Boolean {
+        var clickTime = System.currentTimeMillis()
+        var value = clickTime - lastClickTime
+        lastClickTime = clickTime
+        return value <= 500
+
+
+    }
 }

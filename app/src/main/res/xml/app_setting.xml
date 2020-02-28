@@ -1,0 +1,33 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="常规设置">
+
+        <SwitchPreferenceCompat
+            android:key="notifications"
+            android:title="通知" />
+
+        <ListPreference
+            android:key="sort"
+            android:summary="数据列表的展示顺序"
+            android:title="排序方式" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="其他">
+
+        <Preference
+            android:key="ab_code"
+            android:summary="觉得不错给个star"
+            android:title="开源地址" />
+
+        <Preference
+            android:key="ab_room"
+            android:summary="欢迎留言交流"
+            android:title="我的博客" />
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

@@ -1,6 +1,7 @@
 package com.spica27.accountbook.activity
 
 import android.os.Bundle
+import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -11,20 +12,37 @@ import com.spica27.accountbook.R
 import com.spica27.accountbook.adapter.RecordAdapter
 import com.spica27.accountbook.db.viewmodel.RecordViewModel
 import com.spica27.accountbook.view.FullyLinearLayoutManager
-import kotlinx.android.synthetic.main.activity_allrecord.*
 
-class AllRecordActivity() : BaseActivity() {
+
+class AllRecordActivity : BaseActivity() {
+
     override val contentLayoutId: Int
-        get() = R.layout.activity_allrecord
+        get() = -1
+
+    //禁用xml布局
+    override val contentNeedsFindlayout: Boolean
+        get() = false
 
     private lateinit var recordViewModel: RecordViewModel
 
+    private lateinit var recyclerView: RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val lp = ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        )
+        recyclerView = RecyclerView(this)
+        recyclerView.id = R.id.layout_all_record
+        container.addView(recyclerView, lp)
 
-        rcv_all_record.layoutManager =
+
+
+
+        recyclerView.layoutManager =
             FullyLinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        rcv_all_record.addItemDecoration(
+        recyclerView.addItemDecoration(
             ListItemDivider(this, DividerItemDecoration.VERTICAL)
         )
 
@@ -33,7 +51,7 @@ class AllRecordActivity() : BaseActivity() {
                 .create(RecordViewModel::class.java)
 
         recordViewModel.allRecord?.observe(this, Observer {
-            rcv_all_record.adapter = RecordAdapter(it, this)
+            recyclerView.adapter = RecordAdapter(it, this)
         })
 
 

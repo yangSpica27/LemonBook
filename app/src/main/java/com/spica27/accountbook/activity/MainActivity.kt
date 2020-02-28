@@ -393,7 +393,10 @@ class MainActivity : BaseActivity(), View.OnClickListener, BottomSheetItem.OnCli
                 startActivity(intent)
             }
             R.id.bottom_sheet_item_sync -> {
-                Toast.makeText(this, "敬请期待", Toast.LENGTH_LONG).show()
+                val activity = MYACTIVITYS.find { it.activityClass == BackupActivity::class }
+                val intent = Intent(this, BackupActivity::class.java)
+                intent.putExtra(ACTIVITY_ID, activity?.id)
+                startActivity(intent)
             }
             R.id.bottom_sheet_item_snacks -> {
 

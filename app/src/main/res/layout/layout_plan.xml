@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/uifabric_white"
-        android:hint="￥0"
+        android:text="0"
         android:textColor="@color/uifabric_black"
         android:inputType="number"
         android:padding="@dimen/default_layout_margin"
